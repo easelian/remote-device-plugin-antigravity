@@ -1,0 +1,18 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "remote-device-hub",
+  "displayName": "Remote Device Hub",
+  "version": "0.1.0",
+  "description": "Inspect and operate your enrolled Linux, macOS, and Windows devices through Remote Device Hub.",
+  "author": {
+    "name": "Easelian",
+    "url": "https://easelian.com/"
+  },
+  "homepage": "https://rdh.easelian.com",
+  "license": "Apache-2.0",
+  "logo": "assets/icon.png",
+  "keywords": ["mcp", "remote-device", "files", "processes", "browser"],
+  "suggestedPrompts": [
+    "List my enrolled Remote Device Hub devices and show which ones are online."
+  ]
+}

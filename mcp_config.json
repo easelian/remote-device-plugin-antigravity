@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "rdh": {
+      "serverUrl": "https://rdh.easelian.com/mcp"
+    }
+  }
+}

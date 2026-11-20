@@ -5,9 +5,15 @@ It bundles the hosted RDH MCP server and the `remote-device-operations` skill
 for checking enrolled Linux, macOS, and Windows devices and working with their
 files, processes, and browsers when those capabilities are available.
 
-## Install from a checkout
+## Install
 
-With the Antigravity CLI, run these commands from the repository root.
+Install the plugin from GitHub with the Antigravity CLI.
+
+```sh
+agy plugin install https://github.com/easelian/remote-device-plugin-antigravity
+```
+
+For local development, run these commands from a checkout of the repository.
 
 ```sh
 agy plugin validate --strict .
@@ -32,17 +38,11 @@ skill starts with the read-only `list_devices` call. An empty list means the
 connected account has no devices to show. Manage devices in the
 [RDH console](https://rdh.easelian.com/).
 
-### Hosted OAuth requirement
-
-The plugin connects directly to `https://rdh.easelian.com/mcp` over Streamable
-HTTP. Antigravity discovers the OAuth issuer and uses its native sign-in flow.
-
-RDH Auth currently rejects dynamic registration for
-`https://antigravity.google/oauth-callback` with `invalid_redirect_uri`.
-Antigravity clients using this hosted callback require RDH Auth to allow the
-exact URI before they can sign in. Plugin validation and discovery can be
-tested independently of RDH account sign-in. See the
+The plugin connects to `https://rdh.easelian.com/mcp` over Streamable HTTP.
+Antigravity discovers the RDH OAuth issuer and handles browser sign-in. See the
 [Antigravity MCP authentication guide](https://antigravity.google/docs/mcp/#oauth).
+
+For help with setup or troubleshooting, [contact Easelian](https://easelian.com/contact).
 
 ## License
 
